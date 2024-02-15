@@ -36,12 +36,12 @@
                 Categories
             </div>
         </a>
-        <a href="/admin/dashboard" class="d-flex gap-4 text-white text-decoration-none">
+        <a href="{{ route('add-products') }}" class="d-flex gap-4 text-white text-decoration-none">
             <div class="icon">
-                <i class="bi bi-speedometer"></i>
+                <i class="bi bi-shop"></i>
             </div>
             <div class="text">
-                Dashbord
+                Products
             </div>
         </a>
         <a href="/admin/dashboard" class="d-flex gap-4 text-white text-decoration-none">

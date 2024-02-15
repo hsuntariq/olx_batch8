@@ -49,7 +49,7 @@
                 </form>
             </div>
             <div class="d-flex gap-3 justify-content-between align-items-center">
-                <a href="/" style="color: #002F34" class="fw-bolder fs-5">Login</a>
+                <a href="/" style="color: #002F34;width:max-content" class="fw-bolder fs-5">Sign Up</a>
                 <div class="sell position-relative">
                     <img src="https://www.olx.com.pk/assets/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg"
                         alt="">
