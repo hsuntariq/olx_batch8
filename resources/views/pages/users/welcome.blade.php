@@ -1,7 +1,9 @@
 <x-layout>
+    <x-flash />
     <x-header />
     <x-slider />
     <x-sign-up />
+    <x-login />
     <div class="col-lg-7 mx-auto">
         <h4 class="fw-bold">
             All categories
@@ -50,5 +52,32 @@
             </a>
         @endforeach
     </div>
+
+
+    <script>
+        let signUP = document.querySelector('.sign-up');
+        let form = document.querySelector('.sign-form');
+        let login = document.querySelector('.login');
+        let lform = document.querySelector('.log-form');
+        let close = document.querySelector('.close-form');
+        let close2 = document.querySelector('.close-form2');
+        signUP.addEventListener('click', () => {
+            form.classList.remove('d-none')
+            form.classList.add('d-flex')
+        })
+        close.addEventListener('click', () => {
+            form.classList.remove('d-flex')
+            form.classList.add('d-none')
+        })
+        login.addEventListener('click', () => {
+            lform.classList.remove('d-none')
+            lform.classList.add('d-flex')
+        })
+        close2.addEventListener('click', () => {
+            lform.classList.remove('d-flex')
+            lform.classList.add('d-none')
+        })
+    </script>
+
 
 </x-layout>

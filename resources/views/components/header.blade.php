@@ -25,6 +25,33 @@
                         <p class="m-0 p-0"> Mobiles</p>
                     </div>
                 </div>
+                @auth
+
+
+                    <div class="d-flex gap-3 align-items-center">
+                        <div class="logo">
+                            <i class="bi fs-4 bi-person"></i>
+                        </div>
+                        <div class="text">
+                            <p class="m-0 p-0">
+                                Salam <b class="text-capitalize">{{ auth()->user()->name }}</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center w-100">
+                        <div class="logo">
+
+                        </div>
+                        <div class="text ms-auto w-100 justify-self-end">
+                            <form action="/logout" method="POST" class="d-flex justify-content-end">
+                                @csrf
+                                <button class="btn btn-danger ">
+                                    <i class="bi fs-6 bi-power"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                @endauth
             </div>
         </header>
     </div>
@@ -49,15 +76,24 @@
                 </form>
             </div>
             <div class="d-flex gap-3 justify-content-between align-items-center">
-                <a href="/" style="color: #002F34;width:max-content" class="fw-bolder fs-5">Sign Up</a>
-                <div class="sell position-relative">
-                    <img src="https://www.olx.com.pk/assets/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg"
-                        alt="">
-                    <div class="d-flex position-absolute align-items-center justify-content-center"
-                        style="top: 50%;left:50%;transform:translate(-50%,-50%)">
-                        <i class="bi bi-plus-lg"></i>
-                        <h5 class="p-0 m-0">Sell</h5>
-                    </div>
+                @guest
+
+                    <button href="/" style="color: #002F34;width:max-content"
+                        class="fw-bolder fs-5 bg-transparent border-0 sign-up">Sign Up</button>
+                    <button href="/" style="color: #002F34;width:max-content"
+                        class="fw-bolder fs-5 bg-transparent border-0 login">Log In</button>
+                @endguest
+                @auth
+
+                    <div class="sell position-relative">
+                        <img src="https://www.olx.com.pk/assets/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg"
+                            alt="">
+                        <div class="d-flex position-absolute align-items-center justify-content-center"
+                            style="top: 50%;left:50%;transform:translate(-50%,-50%)">
+                            <i class="bi bi-plus-lg"></i>
+                            <h5 class="p-0 m-0">Sell</h5>
+                        </div>
+                    @endauth
                 </div>
             </div>
         </div>

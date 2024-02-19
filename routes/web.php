@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\categoryController;
 use App\Http\Controllers\productController;
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,4 +31,8 @@ Route::get('/admin/dashboard/products', [productController::class, 'getCategory'
 
 Route::get('/', [categoryController::class, 'getCategories']);
 Route::view('/single-product/{id}/{category}', 'pages.users.single-product');
+Route::view('/sell', 'pages.users.sell');
 Route::get('/single-product/{id}/{category}', [productController::class, 'getSingleProduct']);
+Route::post('/sign-up', [userController::class, 'registerUser']);
+Route::post('/logout', [userController::class, 'signOut']);
+Route::post('/login', [userController::class, 'signIn']);
