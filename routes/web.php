@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\categoryController;
+use App\Http\Controllers\postController;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
@@ -36,3 +37,4 @@ Route::get('/single-product/{id}/{category}', [productController::class, 'getSin
 Route::post('/sign-up', [userController::class, 'registerUser']);
 Route::post('/logout', [userController::class, 'signOut']);
 Route::post('/login', [userController::class, 'signIn']);
+Route::post('/post-add', [postController::class, 'addPost']);
