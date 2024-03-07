@@ -1,5 +1,7 @@
 <x-layout>
     <x-header />
+
+
     <div class="row col-lg-7 mx-auto mt-5">
         <div class="left col-lg-7">
 

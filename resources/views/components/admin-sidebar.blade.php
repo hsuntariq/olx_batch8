@@ -44,20 +44,20 @@
                 Products
             </div>
         </a>
-        <a href="/admin/dashboard" class="d-flex gap-4 text-white text-decoration-none">
+        <a href="/admin/dashboard/manage-products" class="d-flex gap-4 text-white text-decoration-none">
             <div class="icon">
-                <i class="bi bi-speedometer"></i>
+                <i class="bi bi-shop"></i>
             </div>
             <div class="text">
-                Dashbord
+                Manage Products
             </div>
         </a>
-        <a href="/admin/dashboard" class="d-flex gap-4 text-white text-decoration-none">
+        <a href="/admin/dashboard/analytics" class="d-flex gap-4 text-white text-decoration-none">
             <div class="icon">
                 <i class="bi bi-speedometer"></i>
             </div>
             <div class="text">
-                Dashbord
+                Analytics
             </div>
         </a>
         <a href="/admin/dashboard" class="d-flex gap-4 text-white text-decoration-none">

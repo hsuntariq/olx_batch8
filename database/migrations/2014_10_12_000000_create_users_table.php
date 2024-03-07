@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->string('phone');
             $table->string('location');
             $table->string('image')->nullable();
+            $table->integer('role')->default(0);
             $table->rememberToken();
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();

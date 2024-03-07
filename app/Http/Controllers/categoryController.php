@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categories;
 use App\Models\Products;
+use App\Models\UserProducts;
 use Illuminate\Http\Request;
 
 class categoryController extends Controller
@@ -29,7 +30,11 @@ class categoryController extends Controller
     {
         $categories = Categories::paginate(9);
         $products = Products::all();
-        return view('pages.users.welcome', compact('categories', 'products'));
+        $userProducts = UserProducts::all();
+        foreach ($userProducts as $prod) {
+            $prod->image = explode(',', $prod->image);
+        }
+        return view('pages.users.welcome', compact('categories', 'products', 'userProducts'));
     }
 
 }

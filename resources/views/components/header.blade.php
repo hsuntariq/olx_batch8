@@ -25,6 +25,16 @@
                         <p class="m-0 p-0"> Mobiles</p>
                     </div>
                 </div>
+                @can('admin')
+                    <div class="d-flex gap-3 align-items-center">
+                        <div class="logo">
+                            <i class="bi fs-4 bi-car-front"></i>
+                        </div>
+                        <div class="text">
+                            <a href='/admin/dashboard' class="m-0 p-0 text-dark text-decoration-none"> Dashboard</a>
+                        </div>
+                    </div>
+                @endcan
                 @auth
 
 
@@ -52,6 +62,7 @@
                         </div>
                     </div>
                 @endauth
+
             </div>
         </header>
     </div>
@@ -91,7 +102,7 @@
                         <div class="d-flex position-absolute align-items-center justify-content-center"
                             style="top: 50%;left:50%;transform:translate(-50%,-50%)">
                             <i class="bi bi-plus-lg"></i>
-                            <h5 class="p-0 m-0">Sell</h5>
+                            <a href="/sell" class="p-0 m-0 text-decoration-none">Sell</a>
                         </div>
                     @endauth
                 </div>
